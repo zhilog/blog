@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Коллекция заметок</title>
+    <link>https://zhilog.github.io/blog/posts/</link>
+    <description>Recent content in Posts on Коллекция заметок</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ru</language>
+    <copyright>&amp;copy; ifanatic</copyright>
+    <lastBuildDate>Fri, 12 Feb 2021 18:58:26 +0200</lastBuildDate><atom:link href="https://zhilog.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Покупка Ubiquiti Edgerouter X</title>
+      <link>https://zhilog.github.io/blog/posts/edgerouterx/</link>
+      <pubDate>Fri, 12 Feb 2021 18:58:26 +0200</pubDate>
+      
+      <guid>https://zhilog.github.io/blog/posts/edgerouterx/</guid>
+      <description>Особенности роутера Edgerouter X</description>
+    </item>
+    
+    <item>
+      <title>Some example Post</title>
+      <link>https://zhilog.github.io/blog/posts/some-post/</link>
+      <pubDate>Mon, 10 Sep 2018 18:36:26 +0200</pubDate>
+      
+      <guid>https://zhilog.github.io/blog/posts/some-post/</guid>
+      <description>This is a placeholder article. Nothing interesting here &amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>
