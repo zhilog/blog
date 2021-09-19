@@ -3,7 +3,7 @@
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <meta property="og:title" content=" Hugo trouble shooting &middot;  Коллекция заметок" />
+  <meta property="og:title" content=" Hugo troubleshooting &middot;  Коллекция заметок" />
   
     <meta name="theme-color" content="#fcba0" />
   
@@ -24,17 +24,17 @@
   
 
   <title>
-     Hugo trouble shooting &middot;  Коллекция заметок
+     Hugo troubleshooting &middot;  Коллекция заметок
   </title>
 
-  <link rel="alternative stylesheet" href="https://zhilog.github.io/blogcss/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://zhilog.github.io/blogcss/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://zhilog.github.io/blogcss/main.css" />
-  <link rel="stylesheet" href="https://zhilog.github.io/blogcss/github.css" />
-  <link rel="stylesheet" href="https://zhilog.github.io/blogcss/color-theme.css" />
+  <link rel="alternative stylesheet" href="https://zhilog.github.io/blog/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://zhilog.github.io/blog/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://zhilog.github.io/blog/css/main.css" />
+  <link rel="stylesheet" href="https://zhilog.github.io/blog/css/github.css" />
+  <link rel="stylesheet" href="https://zhilog.github.io/blog/css/color-theme.css" />
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
-  <link rel="shortcut icon" href="https://zhilog.github.io/blogimages/favicon.ico" />
-  <link rel="apple-touch-icon" href="https://zhilog.github.io/blogimages/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="https://zhilog.github.io/blog/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://zhilog.github.io/blog/images/apple-touch-icon.png" />
 
   
     <link rel="stylesheet" href="https://zhilog.github.io/blog/css/hamburg.css">
@@ -47,10 +47,10 @@
   <header class="global-header"  style="background-image:url(https://zhilog.github.io/blog/images/bg.jpg)">
   
     <section class="header-text">
-      <h1><a href="https://zhilog.github.io/blog">Коллекция заметок</a></h1>
+      <h1><a href="https://zhilog.github.io/blog/">Коллекция заметок</a></h1>
       
       
-        <a class="btn btn-default btn-home" href="https://zhilog.github.io/blog">
+        <a class="btn btn-default btn-home" href="https://zhilog.github.io/blog/">
           <i class="fa fa-angle-left" aria-hidden="true"></i>
           &nbsp;
         </a>
@@ -82,12 +82,12 @@
 
 <article>
   <header class="article-title">
-    <h1 class="text-primary">Hugo trouble shooting</h1>
+    <h1 class="text-primary">Hugo troubleshooting</h1>
   </header>
   <div class="delimiter"></div>
   <section>
     <h1 id="предпосылки">Предпосылки</h1>
-<p>Часто при написании инструкций в интернете их авторы указывают определенную последовательность действий. При этом в силу своего опыта или в силу того, что инструкции просто скопированы у  других авторов. Все описания абсолютно идентичны. Однако, при следовании этим инструкциям возникают ошибки: ничего не работает и требуется большое количество времени на поиск путей устранения ошибок.</p>
+<p>Часто при написании инструкций в интернете их авторы указывают определенную последовательность действий. При этом все описания абсолютно идентичны. Однако, при попытке следования этим инструкциям возникают ошибки в ситуациях, когда казалось бы &ldquo;ничего не предвещало&rdquo;.</p>
 <p>Чтобы избежать такой ситуации достаточно было бы добавить в описание процесса несколько небольших пояснений. Хотел бы это исправить по горячим следам моего запуска проекта на Hugo.</p>
 <h2 id="проблема-1-не-создается-папка-public">Проблема №1: не создается папка public</h2>
 <p>Если вы уже знакомились с инструкции по генерации статического контента с помощью Hugo, то знаете, что сами статические html страницы формируются в папке public. Но вот вы запустили команду <code> hugo</code>, а папки public в проекте не появилось. В чем может быть дело? В моем случае дело было в инструкции <code>publishDir=&quot;[Название_директории]&quot;</code>. У меня в файле <code>config.toml</code> описывающим основные инструкции по сборке проекта был добавлен такой параметр. В моем случае для данного параметра значение было указано  &ldquo;docs&rdquo;.  Т.е. было написано <code>publishDir=&quot;docs&quot;</code>.  В результате Hugo создал папку <code>docs</code> и поместил туда сгенерированный контент. Как можно догадаться, эта инструкция определяет название папки, куда Hugo складывает сгенерированный статический контент. Мораль: нужно быть осторожнее с инструкциями, которые копируются в <code>config.toml</code>.</p>
@@ -97,9 +97,9 @@
 <p>WARN 2021/03/07 16:01:58 found no layout file for &ldquo;HTML&rdquo; for kind &ldquo;page&rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.
 WARN 2021/03/07 16:01:58 found no layout file for &ldquo;HTML&rdquo; for kind &ldquo;section&rdquo;: You should create a template file which matches Hugo Layouts Lookup Rules for this combination.</p>
 </blockquote>
-<p>Такая ошибка возникает если Hugo не может найти инструкции для формирования html файлов.  Если вы используете шаблон, то причина такой ошибки в том, что в папке с названием шаблона, которая должна находиться в <code>themes</code> находится некорректное содержание. Отсутствуют необходимые инструкции для формирования html файлов. Например, если воздать папку с названием темы, которая указана с <code>config.toml</code>, но при этом оставить ее пустой, то получите именно эту ошибку. Такую же ошибку можно получить, если содержание в папке с названием темы будет, но структура папок будет по какой-то причине отличаться.</p>
+<p>Такая ошибка возникает если Hugo не может найти инструкции для формирования html файлов.  Если вы используете шаблон, то причина такой ошибки в том, что в папке с названием шаблона, которая должна находиться в <code>themes</code> находится некорректное содержание. Отсутствуют необходимые инструкции для формирования html файлов. Например, если cоздать папку с названием темы, которая указана с <code>config.toml</code>, но при этом оставить ее пустой, то получите именно эту ошибку. Такую же ошибку можно получить, если содержание в папке с названием темы будет, но структура папок будет по какой-то причине отличаться.</p>
 <p>Решение проблемы - проверка содержимого папки с названием шаблона в <code>themes</code> и его перезаливка.</p>
-<p>Причем при поиске решения проблемы интернет выдает, что нужно положить html-файлы в папку <code>layout</code>.  Некоторые &ldquo;знатоки&rdquo; пишут, что достаточно создать пустые файлы и сообщения об ошибках исчезнут. Это действительно так! Если создать в пустой папке  <em>layout</em>  пустой файл <em>index.html</em> и папку <em>_default/</em> с  пустыми файлами <em>baseof.html</em>, <em>list.html</em>, <em>single.html</em> ошибки пропадут!  При этом еще приводят ссылку на <a href="https://gohugo.io/templates/lookup-order/">Hugo’s Lookup Order</a>. Но статический контент формироваться не будет! Возникнет другая проблема. В папке public  вместо html будут формироваться <em>xml</em> файлы.</p>
+<p>Причем при поиске решения проблемы интернет выдает, что нужно положить html-файлы в папку <code>layout</code>.  Некоторые &ldquo;знатоки&rdquo; пишут, что достаточно создать пустые файлы и сообщения об ошибках исчезнут. Это действительно так! Если создать в пустой папке  <em>layout</em>  пустой файл <em>index.html</em> и папку <em>_default/</em> с  пустыми файлами <em>baseof.html</em>, <em>list.html</em>, <em>single.html</em> ошибки пропадут!  При этом еще приводят ссылку на <a href="https://gohugo.io/templates/lookup-order/">Hugo’s Lookup Order</a>. Но статический контент формироваться не будет! Вместо этого в папке public будут формироваться <em>xml</em> файлы.</p>
 <h2 id="проблема-3--в-папке-public-генерируются-xml-файлы-вместо-html">Проблема №3:  в папке public генерируются <em>xml</em> файлы вместо <em>html</em></h2>
 <p>Вот как раз <em>xml</em> файлы формируются из-за того, что нет рабочих шаблонов для формирования <em>html</em> файлов. Шаблоны можно найти в документации Hugo по <a href="https://gohugo.io/templates/base/">ссылке</a>. Другим способом решения проблемы является использование уже шаблона (темы оформления). Чтобы этот способ заработал нужно положить файлы темы в папку <code>themes</code> и прописать название темы в <code>config.toml</code>. Для этого в <code>config.toml</code> добавляют строчку <code>theme = &quot;название_шаблона&quot;</code>. В моем случае в файл конфигурации добавил строчку <code>theme = &quot;hamburg&quot;</code>. Можно строчку не добавлять, а запустить команду <code>hugo -t название_шаблона</code>, т.е. в моем случае <code>hugo -t hamburg</code>. Такой подход больше подойдет, если вы экспериментируете с разными темами оформления. При этом команда не избавляет от необходимости иметь такой шаблон в папке  <code>themes</code>.</p>
 <blockquote>
@@ -118,7 +118,36 @@ WARN 2021/03/07 16:01:58 found no layout file for &ldquo;HTML&rdquo; for kind &l
 <p>└── index.html</p>
 </blockquote>
 <h2 id="проблема-4--слетело-форматирование-после-заливки-на-github">Проблема №4:  слетело форматирование после заливки на GitHub</h2>
-<p>Такую ошибку можно получить уже после заливки</p>
+<p>С такой проблемой можно столкнуться уже после заливки содержимого на GitHub. Проблема заклоючается в неверном конфигурировании файла config.toml. В моем случае в строке с адресом сайта отсутствовал последний слеш. Т.е. в инструкции <code>baseurl</code> вместо <code>&quot;https://zhilog.github.io/blog/&quot;</code> было <code>&quot;https://zhilog.github.io/blog&quot;</code>. При этом содержимое сайта корректно отображается при запуске на локальной машине.</p>
+<p>По всей видимости при запуске локального сервера Hugo конфигурационный файл <code>config.toml</code> не используется.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure>
+	<a href=https://zhilog.github.io/blog/posts/hugotroubleshooting/zhilog_troubleshooting_no_formatting.PNG target="_blank">
+		<center>
+			<img class="embedded-image" src=https://zhilog.github.io/blog/posts/hugotroubleshooting/zhilog_troubleshooting_no_formatting_hu6620c475e6cd860699dc09ba067b7bd0_147095_500x0_resize_box_2.PNG>
+		</center>
+	</a>
+	<figcaption>
+		<h4>
+			<center>
+				Вот так выглядит сайт со слетевшим форматированием. (0.15MB)
+			</center>
+		</h4>
+	</figcaption>
+</figure>
+
 
   </section>
   <div class="clearfix">
