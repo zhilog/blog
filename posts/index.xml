@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ru</language>
     <copyright>&amp;copy; ifanatic</copyright>
-    <lastBuildDate>Fri, 12 Feb 2021 18:58:26 +0200</lastBuildDate><atom:link href="https://zhilog.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Mar 2021 15:03:33 +0300</lastBuildDate><atom:link href="https://zhilog.github.io/blog/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo trouble shooting</title>
+      <link>https://zhilog.github.io/blog/posts/hugotroubleshooting/</link>
+      <pubDate>Sun, 07 Mar 2021 15:03:33 +0300</pubDate>
+      
+      <guid>https://zhilog.github.io/blog/posts/hugotroubleshooting/</guid>
+      <description>Неожиданные проблемы при запуске сайта на Hugo</description>
+    </item>
+    
     <item>
       <title>Покупка Ubiquiti Edgerouter X</title>
       <link>https://zhilog.github.io/blog/posts/edgerouterx/</link>
@@ -15,15 +24,6 @@
       
       <guid>https://zhilog.github.io/blog/posts/edgerouterx/</guid>
       <description>Особенности роутера Edgerouter X</description>
-    </item>
-    
-    <item>
-      <title>Some example Post</title>
-      <link>https://zhilog.github.io/blog/posts/some-post/</link>
-      <pubDate>Mon, 10 Sep 2018 18:36:26 +0200</pubDate>
-      
-      <guid>https://zhilog.github.io/blog/posts/some-post/</guid>
-      <description>This is a placeholder article. Nothing interesting here &amp;hellip;</description>
     </item>
     
   </channel>
